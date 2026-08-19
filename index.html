@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student CRUD System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student CRUD System</h1>
+
+    <!-- FORM -->
+    <div class="form-card">
+
+        <h2>Student Information</h2>
+
+        <input type="hidden" id="studentId">
+
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="firstName" placeholder="Enter first name">
+        </div>
+
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="lastName" placeholder="Enter last name">
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter email">
+        </div>
+
+        <div class="form-group">
+            <label>Course</label>
+            <input type="text" id="course" placeholder="Enter course">
+        </div>
+
+        <div class="form-group">
+            <label>Year Level</label>
+            <select id="yearLevel">
+                <option value="">Select Year Level</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+            </select>
+        </div>
+
+        <!-- CRUD BUTTONS -->
+        <div class="crud-buttons">
+
+            <button class="btn-add" onclick="addStudent()">
+                ADD
+            </button>
+
+            <button class="btn-update" onclick="updateStudent()">
+                UPDATE
+            </button>
+
+            <button class="btn-read" onclick="loadStudents()">
+                READ
+            </button>
+
+            <button class="btn-delete" onclick="deleteStudent()">
+                DELETE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- TABLE -->
+    <div class="table-card">
+
+        <h2>Student Records</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                    <th>Year Level</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
